@@ -8,7 +8,7 @@ const Header = () => {
           Community
         </div>
 
-        <nav className="flex space-x-6 text-gray-700 dark:text-gray-300">
+        <nav className="md:flex hidden space-x-6 text-gray-700 dark:text-gray-300">
           <a
             href="#home"
             className="text-sm font-medium border-b-2 border-indigo-600 dark:border-indigo-400 "

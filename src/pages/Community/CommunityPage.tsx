@@ -22,17 +22,17 @@ const CommunityPage: React.FC = () => {
   return (
     <div className="bg-gray-100 dark:bg-transparent">
 
-    <div className="pt-8 min-h-screen max-w-5xl mx-auto flex gap-8">
-      <div className="bg-white dark:bg-slate-900 dark:text-white rounded-lg p-4 flex-[0.25] h-full">
+    <div className="pt-8 min-h-screen max-w-5xl mx-auto flex md:flex-row flex-col-reverse gap-8">
+      <div className="bg-white dark:bg-slate-900 dark:text-white rounded-lg p-4 hidden md:block flex-[0.25] h-full">
         <Explore />
       </div>
 
-      <div className="flex-[0.5] bg-white dark:bg-slate-950 snap-end dark:text-white mb-4 rounded-lg p-4 scrollbar-hidden overflow-y-scroll  h-fit">
+      <div className="flex-1 md:flex-[0.5] m-2 bg-white dark:bg-slate-950 snap-end dark:text-white mb-4 rounded-lg p-4 scrollbar-hidden overflow-y-scroll  h-fit">
         <h2 className="text-lg font-semibold mb-4">Community Posts</h2>
         <PostList posts={posts} />
       </div>
 
-      <div className="flex-[0.25] bg-white dark:bg-slate-900 dark:text-white rounded-lg p-4 h-full">
+      <div className="flex-[0.25] m-2 bg-white dark:bg-slate-900 dark:text-white rounded-lg p-4 h-full">
         <div className="flex flex-col items-center gap-4 mb-6">
           <div className="flex items-center flex-col">
             <img
