@@ -1,5 +1,5 @@
 
-# Community Front Page (React + Typescript)
+# Community Front Page 
 
 This project is a **React application** bootstrapped with **Vite**, designed with scalability and modularity in mind. Below is the folder structure, description, and steps to run the project.
 

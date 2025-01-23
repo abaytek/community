@@ -3,7 +3,7 @@ import { mockPosts } from "../../mocks/mockData";
 import PostForm from "@/components/PostForm/PostForm";
 import PostList from "@/components/PostList/PostList";
 import Explore from "@/components/ui/explore";
-import { CONSTANTS } from "@/utilities/contants";
+import { CONSTANTS } from "@/utilities/constants";
 import { FaEdit } from "react-icons/fa";
 import { FaX } from "react-icons/fa6";
 
@@ -64,8 +64,8 @@ const CommunityPage: React.FC = () => {
           Create post
         </button>
         {isModalOpen && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-            <div className="bg-white dark:bg-slate-900 dark:text-white rounded-lg p-6 w-96 relative">
+          <div className="fixed inset-0 bg-black bg-opacity-50 z-20 flex justify-center items-center">
+            <div className="bg-white dark:bg-slate-900 dark:text-white rounded-sm p-6 w-96 relative">
               <h2 className="text-base font-semibold mb-4">Create a New Post</h2>
               <PostForm
                 onAddPost={(newPost: any) => {

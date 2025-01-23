@@ -2,7 +2,7 @@ import React from "react";
 import { FaPlusCircle } from "react-icons/fa";
 import { useFormik } from "formik";
 import { Formatter } from "@/utilities/formatters";
-import { CONSTANTS } from "@/utilities/contants";
+import { CONSTANTS } from "@/utilities/constants";
 import { Post } from "@/types/Ipost";
 import { PostSchema } from "@/utilities/validation";
 
@@ -20,7 +20,6 @@ const PostForm: React.FC<PostFormProps> = ({ onAddPost }) => {
     },
     validationSchema: PostSchema,
     onSubmit: (values, { resetForm }) => {
-      console.log(values)
       const date = new Date();
       const newPost: Post = {
         id: Date.now(),

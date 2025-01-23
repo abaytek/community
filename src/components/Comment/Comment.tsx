@@ -19,13 +19,13 @@ const Comment: React.FC<CommentProps> = ({ comment }) => {
   };
 
   return (
-    <div className="comment bg-gray-100 p-4 rounded-lg shadow-sm">
-      <p className="text-gray-700">{comment.body}</p>
+    <div className="dark:bg-slate-800 bg-gray-100 p-4 rounded-lg shadow-sm">
+      <p className="text-gray-700 dark:text-gray-200">{comment.body}</p>
 
       <div className="flex items-center mt-2 space-x-4">
         <button
           onClick={() => setIsReplying(!isReplying)}
-          className="flex items-center text-gray-600 text-xs hover:text-indigo-600"
+          className="flex items-center text-gray-600 dark:text-gray-400 text-xs hover:text-indigo-600"
         >
           <FaReply className="mr-2" /> Reply
         </button>
@@ -41,12 +41,10 @@ const Comment: React.FC<CommentProps> = ({ comment }) => {
         )}
       </div>
 
-      {/* Toggle Reply Form */}
       {isReplying && <CommentForm onAddComment={addReply} />}
 
-      {/* Toggle Replies */}
       {showReplies && (
-        <div className="space-y-1 pl-4">
+        <div className="space-y-1 pl-4 ">
           {replies.map((reply) => (
             <Comment key={reply.id} comment={reply} />
           ))}

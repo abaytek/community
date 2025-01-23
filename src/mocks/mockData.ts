@@ -1,4 +1,4 @@
-import { CONSTANTS } from "@/utilities/contants";
+import { CONSTANTS } from "@/utilities/constants";
 
 export const mockPosts = [
   {
